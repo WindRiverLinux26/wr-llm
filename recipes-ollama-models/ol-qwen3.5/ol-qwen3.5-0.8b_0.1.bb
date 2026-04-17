@@ -1,0 +1,7 @@
+require ol-qwen3.5.inc
+
+MODEL_TAG = "0.8b"
+
+MANIFEST_SHA256 = "f3817196d142eaf72ce79dfebe53dcb20bd21da87ce13e138a8f8e10a866b3a4"
+IMAGE_JSON_SHA256 = "b14c6eab49f986e99b2daf9cedac5183c74d4f5ce2585ebb52b8492778adec39"
+MODEL_SHA256 = "afb707b6b8fac6e475acc42bc8380fc0b8d2e0e4190be5a969fbf62fcc897db5"
