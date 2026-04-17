@@ -1,0 +1,9 @@
+This template adds support for ollama to the project.
+
+To use this template, add the following to your setup line:
+
+    --templates feature/ollama --layers wr-llm
+
+#@TYPE: Wrtemplate
+#@NAME: ollama
+#@DESCRIPTION: Add ollama support to the project

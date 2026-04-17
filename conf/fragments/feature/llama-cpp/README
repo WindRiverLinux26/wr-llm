@@ -1,0 +1,9 @@
+This template adds support for llama.cpp to the project.
+
+To use this template, add the following to your setup line:
+
+    --templates feature/llama-cpp --layers wr-llm
+
+#@TYPE: Wrtemplate
+#@NAME: llama-cpp
+#@DESCRIPTION: Add llama.cpp and llama-swap support to the project
