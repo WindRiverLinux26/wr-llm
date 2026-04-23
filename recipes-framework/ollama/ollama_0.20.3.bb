@@ -30,6 +30,7 @@ GO_IMPORT = "import"
 
 DEPENDS += " \
     rsync-native \
+    git-lfs-native \
 "
 
 RDEPENDS:${PN} += " \
