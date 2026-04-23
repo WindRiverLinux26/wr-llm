@@ -75,3 +75,5 @@ PACKAGE_ARCH = "all"
 inherit allarch
 
 COMPATIBLE_HOST = "(x86_64.*|i.86.*|arm.*|aarch64).*-linux"
+
+EXCLUDE_FROM_WORLD = "1"

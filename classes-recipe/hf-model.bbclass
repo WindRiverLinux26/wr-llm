@@ -36,6 +36,8 @@ do_install() {
 
 FILES:${PN} += "${datadir} ${systemd_unitdir}"
 
+EXCLUDE_FROM_WORLD = "1"
+
 PACKAGE_ARCH = "all"
 
 SYSTEMD_SERVICE:${PN} = "${PN}.service"
