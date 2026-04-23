@@ -100,4 +100,9 @@ SYSTEMD_SERVICE:${PN} = "ollama.service"
 
 include relocation.inc
 
+python __anonymous() {
+    if 'ollama' not in (d.getVar('DISTRO_FEATURES_NATIVE') or "").split():
+        raise bb.parse.SkipRecipe("Recipe ollama requires 'ollama' in DISTRO_FEATURES_NATIVE")
+}
+
 COMPATIBLE_HOST = "(x86_64.*|i.86.*|arm.*|aarch64).*-linux"

@@ -25,7 +25,7 @@ SRC_URI[template.sha256sum] = "${TEMPLATE_SHA256}"
 SRC_URI[model.sha256sum] = "${MODEL_SHA256}"
 
 RDEPENDS:${PN} = " \
-    ollama \
+    ${@bb.utils.filter('DISTRO_FEATURES_NATIVE', 'ollama', d)} \
 "
 
 S = "${DL_DIR}"
