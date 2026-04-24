@@ -28,9 +28,10 @@ inherit systemd cmake useradd
 
 GO_IMPORT = "import"
 
+do_unpack[depends] += "git-lfs-native:do_populate_sysroot"
+
 DEPENDS += " \
     rsync-native \
-    git-lfs-native \
 "
 
 RDEPENDS:${PN} += " \
