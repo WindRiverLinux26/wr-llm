@@ -56,6 +56,9 @@ CUSTOMER_RECIPES:tegra += " \
     cuda-nvcc-native \
     cuda-nvprune-native \
     cuda-nvvm-native \
+"
+
+CUSTOMER_RECIPES:wr-llm += " \
     nvidia-driver-x86-64 \
     nvidia-open-gpu-kernel-module \
 "
@@ -66,3 +69,6 @@ BSP_NVIDIA_DERIVED += "${MACHINE}"
 
 BB_NO_NETWORK = "0"
 
+# Do not support live image, becuase of rootfs.img rootfs
+# size is greather than or equal to 4GB
+IMAGE_FSTYPES:remove = "live"
