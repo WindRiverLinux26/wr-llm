@@ -22,27 +22,6 @@
     nvidia-orin-nx|nvidia-orin-agx:
 
         Support CUDA by default, build steps see layers/nvidia-orin/README.proprietary for details
-        Due to nvidia-orin BSPs added ptest to DISTRO_FEATURES by default,
-        add the following lines to local.conf to add recipes for ptest
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-ansi2html'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-cloudpickle'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-dirty-equals'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-email-validator'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-fastjsonschema'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-greenlet'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-html'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-pydoc'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-sqlalchemy'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-unixadmin'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-inline-snapshot'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-zoneinfo'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-pytest-cache'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-statistics'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-dnspython'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-black'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-pytokens'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-asttokens'" >> conf/local.conf
-        $ echo "CUSTOMER_RECIPES:meta-python += 'python3-executing'" >> conf/local.conf
 
     intel-x86-64:
 
