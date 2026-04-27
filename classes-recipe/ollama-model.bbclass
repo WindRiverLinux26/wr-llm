@@ -72,7 +72,9 @@ FILES:${PN} += "${datadir}"
 
 PACKAGE_ARCH = "all"
 
-inherit allarch
+inherit allarch features_check
+
+REQUIRED_DISTRO_FEATURES = "ollama"
 
 COMPATIBLE_HOST = "(x86_64.*|i.86.*|arm.*|aarch64).*-linux"
 

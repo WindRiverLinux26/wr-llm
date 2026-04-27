@@ -43,4 +43,6 @@ PACKAGE_ARCH = "all"
 SYSTEMD_SERVICE:${PN} = "${PN}.service"
 SYSTEMD_AUTO_ENABLE:${PN} ?= "disable"
 
-inherit allarch systemd
+inherit allarch systemd features_check
+
+REQUIRED_DISTRO_FEATURES = "llama-cpp"
