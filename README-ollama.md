@@ -2,6 +2,7 @@
 
 ## 1. Setup and build
 ### 1,1 Supported BSP: 32 bit arm, 64 bit arm, 32 bit x86, 64 bit x86
+The BSP nvidia-orin-agx and nvidia-orin-nx are avaiable on on LTS26+ release
 ```
     --machines qemuarm|qemuarm64|nvidia-orin-agx|nvidia-orin-nx|qemux86|qemux86-64|intel-x86-64...
 ```
@@ -17,7 +18,7 @@
     $ . ./oe-init-build-env <build>
 ```
 
-### 1.4 Optional, supported BSP with Nvidia GPU (CUDA): it requires layer meta-tegra is available
+### 1.4 Optional, supported BSP with Nvidia GPU (CUDA): it requires layer meta-tegra is available on LTS26+ release
 ```
     nvidia-orin-nx|nvidia-orin-agx:
 
