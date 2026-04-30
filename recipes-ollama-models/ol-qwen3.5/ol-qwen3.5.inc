@@ -9,7 +9,7 @@ PARAMS_SHA256 = "9371364b27a52acac9d87f88bd93c9db1174d8d6ec57f6888925cdc1788871f
 
 inherit ollama-model
 
-# No template for qwem3.5
+# No template for qwen3.5
 SRC_URI_TEMPLATE = ""
 
 FILES:${PN}-common = " \
