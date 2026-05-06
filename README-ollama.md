@@ -1,8 +1,11 @@
 # Build and Run
 
 ## 1. Setup and build
-### 1,1 Supported BSP: 32 bit arm, 64 bit arm, 32 bit x86, 64 bit x86
-The BSP nvidia-orin-agx and nvidia-orin-nx are avaiable on on LTS26+ release
+### 1.1 Supported BSP: 32 bit arm, 64 bit arm, 32 bit x86, 64 bit x86
+The BSP nvidia-orin-agx and nvidia-orin-nx are available on LTS26+ release.  
+
+Since large language models often need large contiguous memory, please ensure sufficient  
+memory on BSPs, otherwise running model will fail (such as on qemuarm or qemux86).  
 ```
     --machines qemuarm|qemuarm64|nvidia-orin-agx|nvidia-orin-nx|qemux86|qemux86-64|intel-x86-64...
 ```
@@ -50,15 +53,15 @@ Provide Gemma3 and Qwen3.5 models as recipes:
     # https://ollama.com/library/qwen3.5:4b
     $ echo 'IMAGE_INSTALL:append = " ol-qwen3.5-4b"' >> conf/local.conf
 
-Due to the size of LLMs is large, do not provide download layer along with product for customer,
-user should download them from Ollama regristry https://registry.ollama.ai/ directly
+Because LLMs are large, do not provide download layers with the product for customers,
+users should download them from Ollama registry https://registry.ollama.ai/ directly
 
     $ echo 'BB_NO_NETWORK = "0"' >> conf/local.conf
 
 For Wind River Linux development, provide internal download layers for Gemma3 and Qwen3.5 models
 
-    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.git ../layers/wr-ollama-1-dl
-    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.1.git ../layers/wr-ollama-2-dl
+    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.git ../layers/wr-ollama-dl-5.1
+    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.1.git ../layers/wr-ollama-dl-5.1.1
 ```
 
 ### 1.6 Install Ollama Python Library via recipe

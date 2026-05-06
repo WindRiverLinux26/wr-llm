@@ -1,8 +1,12 @@
 # Build and Run
 
 ## 1. Setup and build
-### 1,1 Supported BSP: All available BSPs
-The BSP nvidia-orin-agx and nvidia-orin-nx are avaiable on on LTS26+ release
+### 1.1 Supported BSP: All available BSPs
+The BSP nvidia-orin-agx and nvidia-orin-nx are available on LTS26+ release.  
+
+Since large language models often need large contiguous memory, please ensure sufficient  
+memory on BSPs, otherwise running model will fail (such as on qemuarm or qemux86).  
+
 ```
     --machines qemuarm|qemuarm64|nvidia-orin-agx|nvidia-orin-nx|qemux86|qemux86-64|intel-x86-64...
 ```
@@ -53,8 +57,8 @@ Provide Gemma3 and Qwen3.5 models as recipes:
     # https://hf-mirror.com/unsloth/Qwen3.5-2B-GGUF/blob/main/Qwen3.5-2B-UD-Q4_K_XL.gguf
     $ echo 'IMAGE_INSTALL:append = " hf-qwen3.5-2b-gguf-ud-q4"' >> conf/local.conf
 
-Due to the size of LLMs is large, do not provide download layer along with product for customer,
-user should download them from Hugging Face https://huggingface.co/ directly
+Because LLMs are large, do not provide download layers with the product for customers,
+users should download them from Hugging Face https://huggingface.co/ directly
 
     $ echo 'BB_NO_NETWORK = "0"' >> conf/local.conf
 
@@ -80,7 +84,7 @@ thousands of people to power their local AI workflows.
     $ echo 'IMAGE_INSTALL:append = " llama-swap"' >> conf/local.conf
 
 Set supported hugging face models to llama-swap, the models are provided by above recipes
-The llama-swap manage these models as web service on port 8080
+The llama-swap manages these models as web service on port 8080
 
     $ echo 'SUPPORT_HF_MODELS = "gemma-3-1b-it-Q4_K_M.gguf gemma-3-1b-it-Q8_0.gguf Qwen3.5-0.8B-UD-Q4_K_XL.gguf Qwen3.5-2B-UD-Q4_K_XL.gguf"' >> conf/local.conf
 ```
@@ -291,7 +295,7 @@ Apr 21 05:08:16 intel-x86-64 llama-server[2307]: main: starting the main loop...
 Apr 21 05:08:16 intel-x86-64 llama-server[2307]: srv  update_slots: all slots are idle
 ```
 
-### 3.5 start web browser to access qwen3.5-0.8b-ud-q4_k_xl.gguf model service
+### 3.5 Start web browser to access qwen3.5-0.8b-ud-q4_k_xl.gguf model service
 ```
     http://target-ip-address:8083
 ```
@@ -350,7 +354,7 @@ root@nvidia-orin-nx:~# systemctl status llama-swap
 Notice: journal has been rotated since unit was started, output may be incomplete.
 ```
 
-### 4.4 start web browser to access llama-swap service
+### 4.4 Start web browser to access llama-swap service
 ```
     http://target-ip-address:8080
 ```

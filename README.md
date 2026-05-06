@@ -4,7 +4,7 @@
 ```
 Get up and running with large language models locally. 
 
-This layer integrates ollama and llama.cpp to Wind River Linux
+This layer integrates ollama and llama.cpp into Wind River Linux
 based on Yocto/OE platform
 
 - Ollama: The easiest way to build with open models [1]
@@ -27,7 +27,7 @@ serve very different user needs.
 - Ollama (The "App Store" Experience): Designed as a user-friendly wrapper. It packages
 models into a "Modelfile" format (similar to Docker), handles automatic GPU/CPU
 offloading, and manages the lifecycle of the model server. It is ideal for users who
-want to run AI models with a single command like `ollama run llama3'
+want to run AI models with a single command like `ollama run llama3`
 
 - llama.cpp (The "Engine"): The underlying C++ library that makes local inference
 possible. It is highly optimized for performance and portability. It requires more
@@ -53,7 +53,7 @@ llama.cpp's server mode is generally more stable for multi-user or agentic workl
 ```
 Feature 	            Ollama	                       llama.cpp
 ----------------------------------------------------------------------------------------
-Ease of Use	Extremely   high (One-click installers)    Moderate (Requires CLI knowledge)
+Ease of Use	Extremely high (One-click installers)    Moderate (Requires CLI knowledge)
 ----------------------------------------------------------------------------------------
 Model Management	    Built-in Ollama Library        Manual download of GGUF files
 ----------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ If product is based on Wind River Linux:
 
 All product names, logos, and brands are property of their respective owners.
 All company, product and service names used in this software are for identification
-purposes only. Wind River are registered trademarks of Wind River Systems.
+purposes only. Wind River is a registered trademark of Wind River Systems.
 
 Disclaimer of Warranty / No Support: Wind River does not provide support and
 maintenance services for this software, under Wind River’s standard Software
@@ -103,11 +103,11 @@ contribution) on an “AS IS” BASIS, WITHOUT WARRANTIES OF ANY KIND, either ex
 or implied, including, without limitation, any warranties of TITLE, NONINFRINGEMENT,
 MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible
 for determining the appropriateness of using or redistributing the software
-and assume ay risks associated with your exercise of permissions under the license.
+and assume any risks associated with your exercise of permissions under the license.
 ```
 
 ## 5. Build and Run
 ```
 See README-ollama.md for ollama details
-See README-llama-cpp.md for llama.cpp detail
+See README-llama-cpp.md for llama.cpp details
 ```
