@@ -60,8 +60,8 @@ users should download them from Ollama registry https://registry.ollama.ai/ dire
 
 For Wind River Linux development, provide internal download layers for Gemma3 and Qwen3.5 models
 
-    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.git ../layers/wr-ollama-dl-5.1
-    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.1.git ../layers/wr-ollama-dl-5.1.1
+    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.git ../layers/wr-ollama-5.1-dl
+    $ git clone --branch master-wr git://lxgit.wrs.com/layers/wr-ollama-dl-5.1.1.git ../layers/wr-ollama-5.1.1-dl
 ```
 
 ### 1.6 Install Ollama Python Library via recipe
