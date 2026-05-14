@@ -29,3 +29,7 @@ EXTRA_OECMAKE = "\
 # error: inlining failed in call to 'always_inline' 'float32x4_t vcvt_f32_f16(float16x4_t)': target specific option mismatch
 TARGET_CC_ARCH:append:arm = " ${@bb.utils.contains("TUNE_FEATURES", "neon","-mfpu=neon-fp16 -mfp16-format=ieee","",d)}"
 
+# Workaround compile failure while DEBUG_BUILD = "1"
+# examples/gguf-hash/deps/xxhash/xxhash.h:4820:1: error: inlining failed in call to
+# 'always_inline' 'XXH3_accumulate_sse2': function not considered for inlining
+CFLAGS:append = " ${@oe.utils.vartrue('DEBUG_BUILD', '-DXXH_NO_INLINE_HINTS=1', '', d)}"
